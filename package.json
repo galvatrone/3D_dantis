@@ -1,0 +1,23 @@
+{
+  "name": "3d-dantis",
+  "version": "1.0.0",
+  "description": "Dental & Orthodontic Center website with 3D animations",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galvatrone/3D_dantis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galvatrone/3D_dantis/issues"
+  },
+  "homepage": "https://github.com/galvatrone/3D_dantis#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}

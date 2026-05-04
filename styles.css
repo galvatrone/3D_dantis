@@ -1740,6 +1740,140 @@
     }
 
     /* ============================================================
+       404 PAGE
+       ============================================================ */
+    .not-found-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .not-found-phone {
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text-soft);
+    }
+
+    .not-found-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 128px 24px 72px;
+    }
+
+    .not-found-hero {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.78fr);
+      gap: 72px;
+      align-items: center;
+    }
+
+    .not-found-copy {
+      max-width: 620px;
+    }
+
+    .not-found-title {
+      font-family: var(--font-serif);
+      font-size: clamp(44px, 7vw, 86px);
+      font-weight: 500;
+      line-height: 1.02;
+      color: var(--color-text);
+      margin-bottom: 24px;
+    }
+
+    .not-found-text {
+      max-width: 520px;
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--color-text-soft);
+      margin-bottom: 36px;
+    }
+
+    .not-found-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .not-found-panel {
+      min-height: 380px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.9), rgba(238,246,252,0.9)),
+        radial-gradient(circle at 25% 20%, rgba(143,179,214,0.28), transparent 36%);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .not-found-panel::before,
+    .not-found-panel::after {
+      content: '';
+      position: absolute;
+      border: 1px solid rgba(41,105,175,0.18);
+      border-radius: 50%;
+    }
+
+    .not-found-panel::before {
+      width: 260px;
+      height: 260px;
+      top: -80px;
+      right: -70px;
+    }
+
+    .not-found-panel::after {
+      width: 180px;
+      height: 180px;
+      bottom: -70px;
+      left: -50px;
+    }
+
+    .not-found-number {
+      font-family: var(--font-serif);
+      font-size: clamp(92px, 13vw, 168px);
+      font-weight: 500;
+      line-height: 0.9;
+      color: var(--color-accent-dk);
+      position: relative;
+      z-index: 1;
+    }
+
+    .not-found-panel-text {
+      margin-top: 18px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      position: relative;
+      z-index: 1;
+    }
+
+    .not-found-footer {
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--color-text-muted);
+      border-top: 1px solid var(--color-border);
+      background: rgba(255,255,255,0.72);
+    }
+
+    .not-found-footer a {
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    /* ============================================================
        DIVIDER
        ============================================================ */
     .divider {
@@ -1756,6 +1890,15 @@
        ============================================================ */
     @media (max-width: 1024px) {
       :root { --section-gap: 80px; }
+
+      .not-found-hero {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .not-found-panel {
+        min-height: 260px;
+      }
 
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1776,6 +1919,20 @@
 
       .nav { display: none; }
       .hamburger { display: flex; }
+
+      .not-found-main {
+        padding-top: 112px;
+      }
+
+      .not-found-actions {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 320px;
+      }
+
+      .not-found-actions .btn {
+        justify-content: center;
+      }
 
       .hero-inner {
         grid-template-columns: 1fr;
